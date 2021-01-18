@@ -9,7 +9,7 @@ class SignUp extends React.Component {
    
     constructor(){
         super();
-        this.state ={
+        this.state = {
             displayName: '',
             email: '',
             password: '',
@@ -35,19 +35,18 @@ class SignUp extends React.Component {
                     email: '',
                     password: '',
                     confirmPassword: ''
-                }
-               
-                );
+                });
             } catch(error){
                 console.error(error);
             }
+            
         }
        
     
     handleChange = event => {
         const { name, value } = event.target;
         this.setState({[name]: value});
-    }
+    };
     render() {
         const { email, displayName, password, confirmPassword } = this.state;
 
